@@ -22,7 +22,7 @@ class ClangFormatCmd(FormatterCmd):
     def run(self):
         """Run clang-format. Error if diff is incorrect."""
         for filename in self.files:
-            # self.compare_to_formatted(filename)
+            self.compare_to_formatted(filename)
             self.returncode = 0
             cmd = ["git", "add", filename]
             sp_child = sp.run(cmd, stdout=sp.PIPE, stderr=sp.PIPE)
