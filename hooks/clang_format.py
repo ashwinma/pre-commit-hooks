@@ -2,6 +2,7 @@
 """Wrapper script for clang-format"""
 import sys
 from typing import List
+import subprocess as sp
 
 from hooks.utils import FormatterCmd
 
